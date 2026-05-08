@@ -1,0 +1,325 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #121212; /* Dark background */
+}
+::-webkit-scrollbar-thumb {
+    background: #f39c12; /* Golden orange scroll */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #d68910;
+}* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://picsum.photos/1920/1080?random=7') center/cover;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.gallery-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #f39c12;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.grid img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.grid img:hover {
+    transform: scale(1.05);
+}
+
+.contact-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #1a1a1a;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #f39c12;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #d68910;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0a0a0a;
+}
+/* Filter Gallery Styles */
+.filter-buttons {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filter-btn {
+    padding: 8px 25px;
+    background: transparent;
+    border: 2px solid #f39c12;
+    color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: #f39c12;
+    color: #121212;
+    font-weight: bold;
+}
+
+.filter-gallery img {
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Jab hum photo ko chupayenge toh ye class kaam aayegi */
+.filter-gallery img.hide {
+    display: none;
+}
+/* Pricing Section Styles */
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.pricing-card {
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    padding: 40px 30px;
+    width: 320px;
+    text-align: center;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Badge ke liye */
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(243, 156, 18, 0.2);
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.pricing-card .price {
+    font-size: 2.5rem;
+    color: #f39c12;
+    margin-bottom: 25px;
+}
+
+.pricing-card .features {
+    list-style: none;
+    margin-bottom: 30px;
+    color: #ccc;
+    text-align: left;
+}
+
+.pricing-card .features li {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.pricing-card .features li:last-child {
+    border-bottom: none;
+}
+
+.book-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Most Popular/Gold Package Styling */
+.pricing-card.popular {
+    border: 2px solid #f39c12;
+    transform: scale(1.05); /* Thoda bada dikhane ke liye */
+}
+
+.pricing-card.popular:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.badge {
+    background-color: #f39c12;
+    color: #121212;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 20px;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* Testimonials / Reviews Styles */
+.review-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.review-card {
+    background-color: #1a1a1a;
+    border-left: 4px solid #f39c12; /* Left side ki stylish line */
+    border-radius: 8px;
+    padding: 30px;
+    width: 320px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.stars {
+    color: #f39c12; /* Golden stars */
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.review-text {
+    font-style: italic;
+    color: #ddd;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.client-name {
+    color: #fff;
+    font-weight: bold;
+    text-align: right; /* Naam right side mein aayega */
+}
+/* Scroll Reveal Effect */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-in-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366; /* WhatsApp ka official green color */
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Taaki ye hamesha sabse upar dikhe */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1); /* Hover karne par thoda bada hoga */
+    background-color: #1ebe57;
+}

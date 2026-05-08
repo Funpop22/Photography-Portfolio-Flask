@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Photography</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    
+    <header>
+        <div class="logo">RK Photography</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Capturing Moments, Telling Stories</h1>
+        <p>Welcome to my professional portfolio.</p>
+    </section>
+
+  <section id="gallery" class="gallery-section">
+        <h2>My Portfolio</h2>
+        
+        <!-- Ye rahe tere Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-name="all">All</button>
+            <button class="filter-btn" data-name="pre-wedding">Pre-Wedding Shoot</button>
+            <button class="filter-btn" data-name="wedding">Wedding Shoot</button>
+            <button class="filter-btn" data-name="family">Family Function</button>
+        </div>
+
+        <!-- Ye rahi Gallery (isme har photo ka apna ek data-name hai) -->
+        <div class="grid filter-gallery">
+            <!-- Pre-wedding photos -->
+            <img src="https://picsum.photos/400/300?random=31" alt="Pre-wedding 1" data-name="pre-wedding">
+            <img src="https://picsum.photos/400/300?random=32" alt="Pre-wedding 2" data-name="pre-wedding">
+            
+            <!-- Wedding photos -->
+            <img src="https://picsum.photos/400/300?random=33" alt="Wedding 1" data-name="wedding">
+            <img src="https://picsum.photos/400/300?random=34" alt="Wedding 2" data-name="wedding">
+            <img src="https://picsum.photos/400/300?random=35" alt="Wedding 3" data-name="wedding">
+            
+            <!-- Family photos -->
+            <img src="https://picsum.photos/400/300?random=36" alt="Family 1" data-name="family">
+        </div>
+    </section>
+    <!-- Pricing & Packages Section -->
+    <section id="pricing" class="gallery-section">
+        <h2>Pricing & Packages</h2>
+        <p style="margin-bottom: 40px; color: #aaa;">Choose the perfect plan for your special day.</p>
+        
+        <div class="pricing-container">
+            
+            <!-- Package 1 -->
+            <div class="pricing-card">
+                <h3>Silver Package</h3>
+                <h4 class="price">₹15,000</h4>
+                <ul class="features">
+                    <li>4 Hours Coverage</li>
+                    <li>50 Edited Photos</li>
+                    <li>Soft Copies via Drive</li>
+                    <li>1 Photographer</li>
+                </ul>
+                <button class="book-btn">Book Now</button>
+            </div>
+
+            <!-- Package 2 (Highlighted/Most Popular) -->
+            <div class="pricing-card popular">
+                <div class="badge">Most Popular</div>
+                <h3>Gold Package</h3>
+                <h4 class="price">₹35,000</h4>
+                <ul class="features">
+                    <li>Full Day Coverage</li>
+                    <li>200 Edited Photos</li>
+                    <li>1 Cinematic Video (3 Mins)</li>
+                    <li>Premium Photo Album</li>
+                    <li>2 Photographers</li>
+                </ul>
+                <button class="book-btn">Book Now</button>
+            </div>
+
+            <!-- Package 3 -->
+            <div class="pricing-card">
+                <h3>Platinum Package</h3>
+                <h4 class="price">₹65,000</h4>
+                <ul class="features">
+                    <li>2 Days Full Coverage</li>
+                    <li>Unlimited Photos</li>
+                    <li>Full Cinematic Video + Teaser</li>
+                    <li>Drone Shoot Included</li>
+                    <li>2 Premium Albums</li>
+                </ul>
+                <button class="book-btn">Book Now</button>
+            </div>
+
+        </div>
+    </section>
+    <!-- Client Reviews Section -->
+    <section id="reviews" class="gallery-section">
+        <h2>Client Stories</h2>
+        <p style="margin-bottom: 40px; color: #aaa;">What people say about our work.</p>
+        
+        <div class="review-container">
+            <!-- Review 1 -->
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"RK Photography made our wedding unforgettable. The team was so professional and the pictures are just magical!"</p>
+                <h4 class="client-name">- Priya & Rahul</h4>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Loved the pre-wedding shoot! The concepts were unique and they made us feel so comfortable in front of the camera."</p>
+                <h4 class="client-name">- Sneha T.</h4>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Hired them for a family function. Punctual, polite, and the album quality is top-notch. Highly recommended!"</p>
+                <h4 class="client-name">- Amit Sharma</h4>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Info Section -->
+    <section id="contact-details" class="gallery-section">
+        <h2>Direct Contact</h2>
+        <p>Bookings aur inquiries ke liye yahan connect karein:</p>
+        
+        <div style="display: flex; justify-content: center; gap: 30px; margin-top: 30px; flex-wrap: wrap;">
+            <!-- Email Box -->
+            <div style="background: #1a1a1a; padding: 20px; border-radius: 10px; width: 250px; border-bottom: 3px solid #f39c12;">
+                <h3 style="color: #f39c12; margin-bottom: 10px;">Email</h3>
+                <p>rohitkumar@example.com</p>
+            </div>
+            
+            <!-- Phone Box -->
+            <div style="background: #1a1a1a; padding: 20px; border-radius: 10px; width: 250px; border-bottom: 3px solid #f39c12;">
+                <h3 style="color: #f39c12; margin-bottom: 10px;">Phone</h3>
+                <p>+91 98765 43210</p>
+            </div>
+            
+            <!-- Social Media Box -->
+            <div style="background: #1a1a1a; padding: 20px; border-radius: 10px; width: 250px; border-bottom: 3px solid #f39c12;">
+                <h3 style="color: #f39c12; margin-bottom: 10px;">Instagram</h3>
+                <p>@rk_photography</p>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section id="contact" class="contact-section">
+        <h2>Get In Touch</h2>
+        <p>Let's create something beautiful together.</p>
+        <button id="contactBtn">Send a Message</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 RK Photography. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/+917018523552?text=Hi%20RK%20Photography,%20I%20want%20to%20book%20a%20photoshoot!" target="_blank" class="whatsapp-float">
+        <!-- Ye WhatsApp ka chhota sa icon hai -->
+        <svg viewBox="0 0 32 32" width="35" height="35" fill="white">
+            <path d="M16.05 2A13.9 13.9 0 0 0 2.1 15.95c0 2.45.65 4.8 1.85 6.9L2 29.9l7.2-1.9c2.05 1.1 4.35 1.7 6.8 1.7A13.9 13.9 0 0 0 29.9 15.95 13.9 13.9 0 0 0 16.05 2zm0 25.5c-2.05 0-4.05-.55-5.8-1.6l-.4-.25-4.3 1.15 1.15-4.2-.25-.4A11.55 11.55 0 0 1 4.45 15.95a11.55 11.55 0 0 1 11.6-11.6A11.55 11.55 0 0 1 27.6 15.95a11.55 11.55 0 0 1-11.55 11.55zm6.35-8.65c-.35-.15-2.05-1-2.35-1.15-.3-.1-.5-.15-.7.15-.2.35-.9 1.15-1.1 1.4-.2.2-.4.25-.75.05a9.35 9.35 0 0 1-2.75-1.7 10.3 10.3 0 0 1-1.9-2.35c-.2-.35 0-.55.15-.7.15-.15.35-.4.5-.6.15-.2.2-.35.3-.55.1-.2.05-.4 0-.55-.1-.15-.7-1.7-.95-2.35-.25-.6-.5-.5-.7-.5h-.6c-.2 0-.55.05-.85.4-.3.35-1.15 1.15-1.15 2.8 0 1.65 1.2 3.25 1.35 3.45.15.2 2.35 3.6 5.7 5.05 2.3 1 2.95.85 3.95.7 1-.15 2.05-.85 2.35-1.65.3-.8.3-1.5.2-1.65-.1-.15-.3-.25-.65-.4z"></path>
+        </svg>
+    </a>
+</body>
+</html>
